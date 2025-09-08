@@ -1,78 +1,79 @@
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  margin-bottom: 40px;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.75em; /* 75% larger than default */
 }
 
-.row {
-  width: 100%;
-}
-
-/* Section Styling */
-.col {
-  border: 1px solid black;
-  background-color: #ccc;
-  padding: 40px 15px 15px 15px;
-  margin: 10px;
-  position: relative;
-}
-
-.col .title {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border: 1px solid black;
-  padding: 5px 15px;
-  font-weight: bold;
-}
-
-.col-chicken .title {
-  background-color: #f5a9a9;
-}
-
-.col-beef .title {
-  background-color: #e74c3c;
-  color: white;
-}
-
-.col-sushi .title {
-  background-color: #f5e79e;
-}
-
-/* Desktop View (≥992px) */
-@media (min-width: 992px) {
-  .col {
-    float: left;
-    width: 32%;
-  }
-}
-
-/* Tablet View (768px–991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .col {
-    float: left;
-    width: 48%;
-  }
-
-  .col-sushi {
-    width: 98%;
-  }
-}
-
-/* Mobile View (≤767px) */
-@media (max-width: 767px) {
-  .col {
+.container {
     width: 100%;
-    float: none;
-  }
+    padding: 0 15px;
+}
+
+.section {
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    position: relative;
+    margin: 15px;
+    padding: 40px 15px 15px 15px;
+    float: left;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.25em; /* 25% larger than default */
+}
+
+#chicken-title {
+    background-color: #ff9999; /* Light red */
+}
+
+#beef-title {
+    background-color: #ff6666; /* Medium red */
+    color: white;
+}
+
+#sushi-title {
+    background-color: #ffcc99; /* Light orange */
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: calc(33.33% - 30px); /* 3 columns with margins */
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        width: calc(50% - 30px); /* 2 columns */
+    }
+    .col-md-12 {
+        width: calc(100% - 30px); /* 1 full-width column */
+        clear: both; /* Force to new row */
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .col-sm-12 {
+        width: calc(100% - 30px); /* 1 full-width column */
+        clear: both; /* Force stacking */
+    }
 }
