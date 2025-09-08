@@ -1,79 +1,19 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Simple test to see if CSS works */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    padding: 20px;
 }
 
 h1 {
+    color: white;
+    background-color: darkblue;
     text-align: center;
-    margin: 30px 0;
-    font-size: 1.75em; /* 75% larger than default */
-}
-
-.container {
-    width: 100%;
-    padding: 0 15px;
+    padding: 20px;
 }
 
 .section {
-    background-color: #f0f0f0;
-    border: 1px solid black;
-    position: relative;
-    margin: 15px;
-    padding: 40px 15px 15px 15px;
-    float: left;
-}
-
-.section-title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120px;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid black;
-    font-size: 1.25em; /* 25% larger than default */
-}
-
-#chicken-title {
-    background-color: #ff9999; /* Light red */
-}
-
-#beef-title {
-    background-color: #ff6666; /* Medium red */
-    color: white;
-}
-
-#sushi-title {
-    background-color: #ffcc99; /* Light orange */
-}
-
-/* Desktop View (992px and above) */
-@media (min-width: 992px) {
-    .col-lg-4 {
-        width: calc(33.33% - 30px); /* 3 columns with margins */
-    }
-}
-
-/* Tablet View (768px to 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-6 {
-        width: calc(50% - 30px); /* 2 columns */
-    }
-    .col-md-12 {
-        width: calc(100% - 30px); /* 1 full-width column */
-        clear: both; /* Force to new row */
-    }
-}
-
-/* Mobile View (767px and below) */
-@media (max-width: 767px) {
-    .col-sm-12 {
-        width: calc(100% - 30px); /* 1 full-width column */
-        clear: both; /* Force stacking */
-    }
+    background-color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
 }
